@@ -1,0 +1,198 @@
+/* All */
+
+body{
+    background-color: whitesmoke;
+}
+
+.page-header {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #253065;
+    margin-top: 0;
+    padding: 20px 20px 20px 40px;
+
+}
+
+
+.admin{
+    margin-left: 1150px;
+    font-size : 30px;
+}
+
+h1 a{
+    color:white;
+}
+
+.Zoo{
+    color:#253065;
+    text-align: left;
+    font-size: 50px;
+    animation-duration: 10s;
+    animation-name: slidein;
+}
+
+@keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 100%;
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
+
+.NomColonne{
+    color:#253065;
+    text-align: center;
+    font-size: 40px;
+    text-decoration: underline #253065;
+}
+
+
+/* animal_list */
+
+.colonne1{
+    display: grid;
+    grid-template-columns: 550px 550px;
+    grid-gap: 20px; 
+    padding: 5px 0;
+}
+
+.colonne2 > div {  
+    border-radius: 1px;
+    border-color: rgb(255, 255, 255);
+    padding: 10px 0;
+    background-color: rgb(255, 255, 255);
+}
+
+
+.colonne2{
+    display: grid;
+    grid-template-columns: 260px 260px;
+    grid-auto-rows: 285px;
+    grid-gap: 20px; 
+}
+
+.ligne{
+    display: grid;
+    grid-auto-rows: 20px;
+    grid-gap: 15px;
+    text-align: center;
+}
+
+.Photo {
+    grid-column: 1 / 14;
+    grid-row: 1;
+    
+}
+
+.Nom {
+    grid-column: 5;
+    grid-row: 7;
+    color: #253065;
+    font-weight: bold;
+}
+
+.Etat {
+    border-radius: 5px;
+    background-color: rgb(113, 114, 128);
+    color: #fafdfd; 
+    grid-row: 7;
+    grid-column: 6/11;
+
+}
+
+.Detail {
+    border-radius: 5px;
+    background-color: #253065;
+    grid-column: 5 / 11;
+    grid-row: 8;
+}
+
+.BtnDetail{
+    color:white;
+}
+
+.Disponibilite_libre{
+    border-radius: 5px;
+    background-color: rgb(13, 197, 7);
+    color: white; 
+    grid-row: 7;
+    grid-column: 6/11;
+}
+
+.Disponibilite_occupe{
+    border-radius: 5px;
+    background-color: rgb(197, 7, 7);
+    color: white; 
+    grid-row: 7;
+    grid-column: 6/11;
+}
+
+/* animal_detail */
+
+.DetailAnimal{
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+    color: #253065;
+}   
+
+
+.NomAnimal{
+    color:#253065;
+    text-align: center;
+    font-size: 50px;
+}
+
+.Photo2{
+    align-items: center;
+}
+
+.Info{
+    text-align: center;
+    font-size: 30px;
+}
+
+.OK{
+    color: #253065;
+    background-color: #858585;
+    border-radius: 5px;
+    padding: 6px 20px;
+    border: none;
+}
+
+.Back{
+    color: white;
+    background-color: #253065;
+    border-radius: 5px;
+    padding: 8px 20px;
+}
+
+/* erreur */
+
+.BtnBack {
+    color: white;
+    background-color: #253065;
+    border-radius: 5px;
+    margin-left: 1050px;
+    padding: 10px 30px;
+
+}
+
+/* equipement_detail */
+
+.equipement_detail{
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+    color: #253065;
+}
+
+.NomEquip{
+    color:#253065;
+    text-align: center;
+    font-size: 50px;
+}

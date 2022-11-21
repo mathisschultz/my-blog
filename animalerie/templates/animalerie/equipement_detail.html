@@ -1,0 +1,19 @@
+{% extends 'animalerie/base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="equipement_detail">
+    <div class="NomEquip">
+        {{ equipement.id_equip }}
+    </div>
+    <div class="Photo2">
+        <img src=/{{equipement.photo}} alt="" id="pic" width="400" height="400"/>
+    </div>
+    <div class='Info'>
+        {{equipement.disponibilite}}
+    </div>
+        <a class="Back" href="{% url 'animal_list' %}">Back</a>
+    </form>
+</div>
+
+{% endblock %}

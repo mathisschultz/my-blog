@@ -1,0 +1,47 @@
+{% extends 'animalerie/base.html' %}
+{% load static %} 
+
+{% block content %}
+
+<div class="Zoo">
+    Plongez au coeur de l'aquarium !
+</div>
+
+<div class="colonne1">
+<div class="NomColonne">Animaux</div>
+<div class="NomColonne">Equipements</div>
+
+    <div class="colonne2">
+        {% for animal in animaux %}
+        <div class="ligne">
+            <div class="Photo">
+                <img src={{animal.photo}} alt="" id="pic" width="200" height="200"/>
+            </div>
+            <div class="Nom"> {{ animal.id_animal }} </div>
+            <div class="Etat"> {{ animal.etat }}</div>
+            <div class="Detail">
+                <a class="BtnDetail" href="{% url 'animal_detail' id_animal=animal.id_animal %}">Plus de détails</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="colonne2">
+        {% for equipement in equipements %}
+        <div class="ligne">
+            <div class="Photo">
+                <img src={{equipement.photo}} alt="" id="pic" width="200" height="200"/>
+            </div>
+            <div class="Nom"> {{ equipement.id_equip }} </div>
+            {% if equipement.disponibilite == 'Libre' %}
+                <div class="Disponibilite_libre"> ✔ {{ equipement.disponibilite }}</div>
+            {% else %}
+                <div class="Disponibilite_occupe"> ✘ {{ equipement.disponibilite }}</div>
+            {% endif %}
+            <div class="Detail">
+                <a class="BtnDetail" href="{% url 'equipement_detail' id_equip=equipement.id_equip %}">Plus de détails</a>
+            </div>
+        </div>
+        {% endfor %}
+
+    </div>
+    {% endblock %}
